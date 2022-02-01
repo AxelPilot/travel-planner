@@ -1,0 +1,92 @@
+@import "variables";
+
+@media only screen {
+    body {
+        background: #000d3c;
+        background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    }
+}
+
+@media only print {
+    body {
+        background: #ffffff;
+    }
+}
+body {
+    color: $text_color;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 25px;
+}
+
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 1700px;
+    width: 100%;
+    margin: 15px auto;
+}
+
+.btn {
+    border-radius: 7px;
+    font-size: 0.8em;
+    padding:  12px 12px;
+    max-width: 300px;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 3px solid black;
+    background: white;
+    color: black;
+    margin: 8px 8px 8px 0;
+}
+
+.btn-outline-primary {
+    border: 3px solid white;
+    background: none;
+    color: black;
+    margin: 8px 0px 8px 0;
+}
+
+.btn-primary:hover {
+    background: #ffffff33;
+}
+
+.btn-outline-primary:hover {
+    background: #ffffff;
+}
+
+img {
+    max-width: 550px;
+    height: auto;
+}
+
+@media only print {
+    .btn {
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .btn {
+        font-size: 1em;
+        padding:  8px 22px;
+        margin: 8px 14px 8px 0;
+    }    
+}
+
+@media only screen and (min-width: 1350px) {
+    section {
+        margin: 50px auto;
+    }
+}

@@ -1,0 +1,130 @@
+@import "variables";
+
+.resultSection {
+    margin-top: 10px;
+    display: none;
+}
+
+.results {
+    color: $form_text_color;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    padding: $form_padding;
+
+    strong {
+        font-weight: bold;
+    }
+}
+
+@media only screen {
+    .results {
+        background: $form_bg_color;
+        border-radius: $border_radius;
+        box-shadow: $box-shadow;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tripTitle {
+    margin-bottom: 10px;
+    
+    h2 {
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+}
+
+.tripSubTitle {
+    font-size: 0.7em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.tripBody {
+    font-size: 0.7em;
+    font-weight: normal;
+    line-height: 1.3em;
+}
+
+.tripWxTitle {
+    font-size: 0.6em;
+    margin-top: 20px;
+    line-height: 1.3em;
+}
+
+.tripWxBody {
+    font-size: 0.5em;
+    line-height: 1.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tripWxWeek {
+    display: flex;
+    flex-direction: row;
+}    
+
+.tripWxDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wxIcon{
+    width: 37px;
+    height: 37px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .tripTitle {
+        margin-bottom: 10px;
+        
+        h2 {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+    }
+    
+    .tripSubTitle {
+        font-size: 1.1em;
+        font-weight: bold;
+        line-height: 1.5em;
+    }
+    
+    .tripBody {
+        font-size: 1em;
+        font-weight: normal;
+        line-height: 1.3em;
+    }
+    
+    .tripWxTitle {
+        font-size: 1.1em;
+        margin-top: 20px;
+        line-height: 1.3em;
+    }
+    
+    .tripWxBody {
+        font-size: 0.8em;
+        line-height: 1.5em;
+    }    
+    .wxIcon{
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .results {
+        flex-direction: row;
+        gap: 50px;
+        padding: 50px;
+    }    
+}

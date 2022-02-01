@@ -1,0 +1,92 @@
+@import "variables";
+
+.formDiv {
+    background: $form_bg_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: $border_radius;
+    padding: 20px 0 0 0;
+    box-shadow: $box-shadow;
+
+    h3 {
+        font-size: 0.8em;
+    }
+}
+
+.formHdgDiv {
+    text-align: center;
+    color: black;
+}
+
+.formFieldDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: $form_padding;
+
+    input {
+        border: 1px solid #979797;
+        font-size: 1em;
+        padding: 20px 20px;
+        line-height: 1.6;
+        border-radius: $border_radius;
+
+    }
+
+    input[type="submit"] {
+        background: #e0efff;
+
+        &:hover {
+            transform: scale(1.015, 1.025);
+            background: #d4e8ff;
+        }
+    }
+    .country {
+        border: 1px solid #979797;
+        font-size: 1em;
+        padding: 20px 20px;
+        line-height: 16px;
+        border-radius: $border_radius;
+    }
+}
+
+@media only print {
+    .formDiv {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .formDiv {
+        h3 {
+            font-size: 1.2em;
+        }    
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .formFieldDiv {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 15px;
+        padding: 0px 50px 50px 50px;
+
+        .country {
+            max-width: 290px;
+        }
+        .location {
+            min-width: 240px;
+        }
+    
+        .startDate {
+            min-width: 210px;
+        }
+    
+        .endDate {
+            min-width: 210px;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <!-- Load Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar"></nav>
+    <header>
+        <h1>Travel Planner</h1>
+    </header>
+
+    <main>
+        <section class="resultSection">
+            <div class="results">
+                <div class="imageContainer">
+                </div>
+                <div class="info">
+                    <div class="tripTitle">
+                        <h2 class="tripTitleHdg"></h2>
+                    </div>
+                    <div class="tripSubTitle"></div>
+                    <div class="tripBody"></div>
+                    <button id="removeTrip" class="btn btn-primary">Remove Trip</button>
+                    <div class="tripWxTitle"></div>
+                    <div class="tripWxBody"></div>
+                </div>
+            </div>
+        </section>
+        <section class="savedTripsSection">
+            <form class="savedTripsForm">
+                <div class="savedTripsDiv">
+                    <div class="savedTripsHdgDiv">
+                        <h3 class="savedTripsHdg">Your Saved Trips:</h3>
+                    </div>
+                    <div class="savedTripsFieldDiv">
+                        <select name="savedTrips" id="savedTrips" class="savedTrips">
+
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="formSection">
+            <form class="travelForm">
+                <div class="formDiv">
+                    <div class="formHdgDiv">
+                        <h3 class="formHdg">Please enter your travel details:</h3>
+                    </div>
+                    <div class="formFieldDiv">
+                        <select class="country" name="country" id="country">
+                            <option value="">Select country</option>
+                        </select>
+                        <input type="text" class="location" id="location" name="location" placeholder="Enter location">
+                        <input type="date" class="startDate" id="startDate" name="startDate" placeholder="YYYY-MM-DD">
+                        <input type="date" class="endDate" id="endDate" name="endDate" placeholder="YYYY-MM-DD">
+                        <input type="submit" class="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Axel Smidt</p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@import "variables";
+
+footer {
+    background: #252525;
+    color: #e7e7e7;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only print {
+    footer {
+        display: none;
+    }
+}

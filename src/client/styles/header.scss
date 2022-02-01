@@ -1,0 +1,37 @@
+@import "variables";
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 40px 0px 40px;
+
+    @media only print {
+        h1 {
+            color: #000; 
+            font-family: sans-serif;
+            font-size: 1.6em;
+            margin: 0;
+        }   
+    }
+
+    @media only screen {
+        h1 {
+            color: #fff;
+            font-family: 'Quintessential', cursive;
+            font-weight: bold;
+/*             font-family: 'Fira Sans', sans-serif; */
+            text-shadow: 3px 3px 3px black;
+            font-size: 1.4em;
+            margin: 0.5em 0;
+            padding: 0;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        h1 {
+            font-size: 3em;
+            margin: 0.3em 0.3rem;
+        }
+    }
+}

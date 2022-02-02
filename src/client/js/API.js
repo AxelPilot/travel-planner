@@ -1,7 +1,8 @@
 'use strict';
 
 /**
- * 
+ * Contains API call methods to Geonames.org, Weatherbit.io
+ * and Pixabay.com.
  */
 export class API {
     /**

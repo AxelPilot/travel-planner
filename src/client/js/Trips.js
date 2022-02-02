@@ -7,13 +7,22 @@ import {
 export let trips;
 
 /**
- * 
+ * Administers stored trip information, both on the 
+ * client side and on the server side.
  */
 class Trips {
     #trips = [];
     #selectedTripIndex = 0;
     /**
+     * If one or more trips are saved, store the trips on the client,
+     * display the selected trip in the result section view, and
+     * populate the saved trips dropdown list.
      * 
+     * Add an event listener to update the result section view
+     * whenever a new saved trip is selected.
+     * 
+     * Adds an event listener to remove the currently selected
+     * trip when the 'Remove Trip' button is clicked.
      */
     constructor() {
         Client.retrieveData('/savedTrips').then(data => {
@@ -38,7 +47,7 @@ class Trips {
             this.#setSelectedTripIndex(savedTripsElement.value);
         });
 
-        // Adds an event listener to remove the currently selected 
+        // Adds an event listener to remove the currently selected
         // trip when the 'Remove Trip' button is clicked.
         document.getElementById('removeTrip').addEventListener('click', () => {
             if (confirm('Are you sure you want to delete the trip?')) {

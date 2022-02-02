@@ -1,13 +1,13 @@
 'use strict';
 
 /**
- * 
+ * Administers weather data from the Weatherbit.io API.
  */
 export class Weather {
     #wxRawData;
     /**
-     * 
-     * @param {*} wxRawData 
+     * Stores the weather data.
+     * @param {*} wxRawData Weather data from the Weatherbit.io API.
      */
     constructor(wxRawData) {
         this.#wxRawData = wxRawData;

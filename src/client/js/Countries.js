@@ -2,7 +2,9 @@
 export let countries;
 
 /**
- * 
+ * Retrieves a list of two-digit country codes and corresponding 
+ * country names from the server, and stores the list inside the
+ * class for use in the application.
  */
 class Countries {
      #countries;

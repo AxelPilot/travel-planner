@@ -64,8 +64,7 @@ export class Weather {
      * @returns The url to the appropriate weather icon.
      */
     #interpretWeather(day) {
-        return `<img src="https://www.weatherbit.io/static/img/icons/` +
-            `${this.#wxRawData.data[day].weather.icon}.png" class="wxIcon" ` +
+        return `<img src="${this.#wxRawData.data[day].weather.icon}.png" class="wxIcon" ` +
             `title="${this.#wxRawData.data[day].weather.description}">`;
     }
 }

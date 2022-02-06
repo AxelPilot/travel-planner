@@ -3,7 +3,7 @@
 /**
  * 
  */
-export class ProcessMessage {
+export class LoadingCircle {
     /**
      * 
      */

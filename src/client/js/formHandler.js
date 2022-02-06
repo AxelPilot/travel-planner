@@ -32,7 +32,8 @@ export const handleSubmit = (() => {
                         startDateField.value,
                         endDateField.value
                     );
-
+                    
+                    Client.ProcessMessage.show();
                     Client.trips.generateTrip(
                         locationField.value,
                         countryField.value,
@@ -51,6 +52,8 @@ export const handleSubmit = (() => {
                         } else {
                             console.log('Error', e);
                         }
+                    }).finally(() => {
+                        Client.ProcessMessage.hide();
                     });
                 } catch (e) {
                     if (e instanceof CountryValidationException

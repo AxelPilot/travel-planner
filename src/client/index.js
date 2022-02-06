@@ -4,6 +4,7 @@
 import './styles/resets.scss';
 import './styles/base.scss';
 import './styles/header.scss';
+import './styles/load.scss';
 import './styles/form.scss';
 import './styles/savedTripsForm.scss';
 import './styles/results.scss';
@@ -86,6 +87,7 @@ import { Weather } from './js/Weather';
 import { trips, initTrips } from './js/Trips';
 import { dotenv, initDotenv } from './js/Dotenv';
 import { API } from './js/API';
+import { ProcessMessage } from './js/ProcessMessage';
 import {
     initSlideshow,
     navSlides,
@@ -110,6 +112,7 @@ export {
     fitImagesInsideWindow,
     addResizeListener,
     trips,
+    ProcessMessage,
     initTrips,
     dotenv,
     initDotenv,

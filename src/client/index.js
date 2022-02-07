@@ -80,7 +80,7 @@ import u00n from './images/u00n.png';
 // JS Imports
 import { retrieveData } from './js/retrieveData';
 import { postData } from './js/postData';
-import { validateDate, validateCountry, validateLocation } from './js/validation';
+import { Validate } from './js/validation';
 import { populateCountryList, countries } from './js/Countries';
 import { handleSubmit } from './js/formHandler';
 import { Weather } from './js/Weather';
@@ -99,9 +99,7 @@ import {
 export {
     retrieveData,
     postData,
-    validateDate,
-    validateCountry,
-    validateLocation,
+    Validate,
     countries,
     populateCountryList,
     handleSubmit,

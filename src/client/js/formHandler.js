@@ -82,9 +82,9 @@ export const handleSubmit = (() => {
  */
 export const validateInputFields = (location, country, startDate, endDate) => {
     try {
-        Client.validateCountry(country);
-        Client.validateLocation(location);
-        Client.validateDate(startDate, endDate);
+        Client.Validate.country(country);
+        Client.Validate.location(location);
+        Client.Validate.date(startDate, endDate);
     } catch (e) {
         throw e;
     }

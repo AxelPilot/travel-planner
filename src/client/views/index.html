@@ -76,13 +76,29 @@
         <p>&copy; Axel Smidt</p>
     </footer>
     <script>
-        // Check that service workers are supported
+        // // Check that service workers are supported
+        // if ('serviceWorker' in navigator) {
+        //     // Use the window load event to keep the page load performant
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('/service-worker.js');
+        //     });
+        // }
+
         if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
+                navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+                    // registration worked
+                    console.log('Registration succeeded.');
+                    registration.unregister().then((boolean) => {
+                        console.log(boolean);
+                        // if boolean = true, unregister is successful
+                    });
+                }).catch((error) => {
+                    // registration failed
+                    console.log('Registration failed with ' + error);
+                });
             });
-        }
+        };    
     </script>
 </body>
 

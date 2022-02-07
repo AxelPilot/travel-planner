@@ -84,21 +84,21 @@
         //     });
         // }
 
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js').then((registration) => {
-                    // registration worked
-                    console.log('Registration succeeded.');
-                    registration.unregister().then((boolean) => {
-                        console.log(boolean);
-                        // if boolean = true, unregister is successful
-                    });
-                }).catch((error) => {
-                    // registration failed
-                    console.log('Registration failed with ' + error);
-                });
-            });
-        };    
+        // if ('serviceWorker' in navigator) {
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+        //             // registration worked
+        //             console.log('Registration succeeded.');
+        //             registration.unregister().then((boolean) => {
+        //                 console.log(boolean);
+        //                 // if boolean = true, unregister is successful
+        //             });
+        //         }).catch((error) => {
+        //             // registration failed
+        //             console.log('Registration failed with ' + error);
+        //         });
+        //     });
+        // };    
     </script>
 </body>
 

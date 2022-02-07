@@ -27,7 +27,8 @@ export const initSlideshow = (parentElement, images, interval, maxSlides = 10) =
             clearInterval(slideshowID);
         }
         parentElement.innerHTML = 
-            `<div><img class="image fade" src="${images[0].largeImageURL}"></div>` +
+            `<div><div><img class="image" src="${images[0].largeImageURL}">` +
+            `</div><div class="column-filler-div"></div></div>` +
             `<div class="row-filler-div"></div>`;
     } else if (images.length > 1) { // If more than one image is found, make a slideshow.
         removeImages(parentElement); // Remove any previously displayed images.

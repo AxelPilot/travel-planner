@@ -14,11 +14,11 @@ class Trips {
     #trips = [];
     #selectedTripIndex = 0;
     /**
-     * If one or more trips are saved, store the trips on the client,
-     * display the selected trip in the result section view, and
-     * populate the saved trips dropdown list.
+     * If one or more trips are saved, stores the trips on the client,
+     * displays the selected trip in the result section view, and
+     * populates the saved trips dropdown list.
      * 
-     * Add an event listener to update the result section view
+     * Adds an event listener to update the result section view
      * whenever a new saved trip is selected.
      * 
      * Adds an event listener to remove the currently selected

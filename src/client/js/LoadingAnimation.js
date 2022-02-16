@@ -3,7 +3,7 @@
 /**
  * 
  */
-export class LoadingCircle {
+export class LoadingAnimation {
     /**
      * 
      */

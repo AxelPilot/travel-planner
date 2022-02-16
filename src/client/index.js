@@ -87,7 +87,7 @@ import { Weather } from './js/Weather';
 import { trips, initTrips } from './js/Trips';
 import { dotenv, initDotenv } from './js/Dotenv';
 import { API } from './js/API';
-import { LoadingCircle } from './js/LoadingCircle';
+import { LoadingAnimation } from './js/LoadingAnimation';
 import {
     initSlideshow,
     navSlides,
@@ -110,7 +110,7 @@ export {
     fitImagesInsideWindow,
     addResizeListener,
     trips,
-    LoadingCircle,
+    LoadingAnimation,
     initTrips,
     dotenv,
     initDotenv,
